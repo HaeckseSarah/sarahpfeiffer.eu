@@ -1,0 +1,126 @@
+# Site settings
+baseURL = "https://sarahpfeiffer.eu"
+languageCode = "en-US"
+title = "Sarah Pfeiffer"
+theme = "hugo-split-theme"
+disableKinds = ["section", "taxonomy", "RSS", "sitemap"]
+disableHugoGeneratorInject = true
+
+# Local preview mode
+relativeURLs = true
+uglyURLs = false
+
+# Copyright
+copyright = "&copy;2025 Sarah Pfeiffer"
+
+[services]
+  [services.googleAnalytics]
+    # Enter your tracking code to enable Google Analytics
+    ID = ""
+
+[params]
+
+  # Metadata for search engines and social sharing
+  author = "Sarah Pfeiffer"
+  description = ""
+  #shareImage = "images/social.jpg"
+  #twitterHandle = "onepagelove"
+
+  # Whether you purchased the license from the author.
+  licensed = false
+
+  # Favicon
+  favicon = "favicon.ico"
+
+  # Section - Visual
+  [params.visual]
+
+    # Image
+    [params.visual.image]
+      enable = true
+      file = "images/sarah.jpg"
+      position = "center top"
+
+    # Video
+    [params.visual.video]
+      enable = false
+      #mute = true
+      #file = "videos/background.mp4"
+      # youtubeId = "dk9uNWPP7EA"
+
+  # Links
+  #
+  # Links List #1
+  [[params.links]]
+    [params.links.list1]
+      heading = "Site"
+
+      [[params.links.list1.link]]
+        text = "Über mich"
+        url = "/about"
+        new_tab = false
+
+      [[params.links.list1.link]]
+        text = "Referenzen"
+        url = "/referenzen"
+        new_tab = false
+
+      [[params.links.list1.link]]
+        text = "Impressum"
+        url = "/impressum"
+        new_tab = false
+
+  # Links List #2
+  [[params.links]]
+    [params.links.list2]
+      heading = "Social"
+
+      [[params.links.list2.link]]
+        text = "Xing"
+        url = "https://www.xing.com/profile/Sarah_Pfeiffer43"
+        new_tab = true
+
+      [[params.links.list2.link]]
+        text = "Instagram"
+        url = "https://www.instagram.com/haecksesarah/"
+        new_tab = true
+
+      [[params.links.list2.link]]
+        text = "Mastodon"
+        url = "https://chaos.social/@HaeckseSarah"
+        new_tab = true
+
+  # Links List #3
+  [[params.links]]
+    [params.links.list3]
+      heading = "Network"
+
+      [[params.links.list3.link]]
+        text = "Blog"
+        url = "https://haecksesarah.de"
+        new_tab = true
+
+      [[params.links.list3.link]]
+        text = "Queeres Köpenick"
+        url = "https://queeres-koepenick.de"
+        new_tab = true
+
+      [[params.links.list3.link]]
+        text = "Team Queer Treptow-Köpenick"
+        url = "https://tqtk.de"
+        new_tab = true
+
+  # The original template is released under the Creative Commons Attribution 3.0 License.
+  # Please keep the original attribution link when using for your own project.
+  # If you'd like to use the template without the attribution, you can check out
+  # the license option via the template author's website: https://onepagelove.com/split
+
+[server]
+[[server.headers]]
+    for = '/**'
+    [server.headers.values]
+      Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://dummyimage.com"
+      Referrer-Policy = 'strict-origin-when-cross-origin'
+      X-Content-Type-Options = 'nosniff'
+      X-Frame-Options = 'DENY'
+      X-XSS-Protection = '1; mode=block'
